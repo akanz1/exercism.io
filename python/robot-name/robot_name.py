@@ -1,6 +1,5 @@
 import random
 from string import ascii_letters as alphabet
-from typing import List
 
 
 class Robot:
