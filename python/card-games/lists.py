@@ -4,9 +4,6 @@ Python list documentation: https://docs.python.org/3/tutorial/datastructures.htm
 """
 
 
-from numpy import mean
-
-
 def get_rounds(number):
     """Create a list containing the current and next two round numbers.
 
@@ -67,9 +64,10 @@ def average_even_is_average_odd(hand):
     :param hand: list - cards in hand.
     :return: bool - are even and odd averages equal?
     """
-
-    avg_even = mean(hand[::2])
-    avg_odd = mean(hand[1::2])
+    evens = hand[::2]
+    odds = hand[1::2]
+    avg_even = sum(evens) / len(evens)
+    avg_odd = sum(odds) / len(odds)
     return avg_even == avg_odd
 
 
