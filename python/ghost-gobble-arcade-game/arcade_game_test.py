@@ -1,7 +1,6 @@
 import unittest
 
 import pytest
-
 from arcade_game import eat_ghost, lose, score, win
 
 

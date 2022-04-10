@@ -1,8 +1,6 @@
 import unittest
 
-from perfect_numbers import (
-    classify,
-)
+from perfect_numbers import classify
 
 # Tests adapted from `problem-specifications//canonical-data.json`
 
