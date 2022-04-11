@@ -1,5 +1,5 @@
 def equilateral(sides):
-    return sides[0] == sides[1] == sides[2] if sides[0] > 0 else False
+    return len(set(sides)) == 1 if sides[0] > 0 else False
 
 
 def isosceles(sides):
