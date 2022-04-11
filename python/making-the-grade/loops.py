@@ -44,7 +44,7 @@ def letter_grades(highest):
     """
 
     diff = highest - 40
-    return [41 + (i * diff // 4) for i in range(4)]
+    return [41 + (idx * diff // 4) for idx in range(4)]
 
 
 def student_ranking(student_scores, student_names):
@@ -54,7 +54,10 @@ def student_ranking(student_scores, student_names):
     :param student_names: list of names in descending order by exam score.
     :return: list of strings in format ["<rank>. <student name>: <score>"].
     """
-    return [f"{i + 1}. {name}: {student_scores[i]}" for i, name in enumerate(student_names)]
+    return [
+        f"{idx + 1}. {name}: {student_scores[idx]}"
+        for idx, name in enumerate(student_names)
+    ]
 
 
 def perfect_score(student_info):
@@ -64,11 +67,11 @@ def perfect_score(student_info):
     :return: first `[<student name>, 100]` or `[]` if no student score of 100 is found.
     """
 
-    i = 0
+    idx = 0
     while True:
         try:
-            if student_info[i][1] == 100:
-                return student_info[i]
-            i += 1
+            if student_info[idx][1] == 100:
+                return student_info[idx]
+            idx += 1
         except IndexError:
             return []
