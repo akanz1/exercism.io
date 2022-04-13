@@ -55,4 +55,8 @@ def list_inventory(inventory):
     :return: list of tuples - list of key, value pairs from the inventory dictionary.
     """
 
-    return [(k, v) for k, v in inventory.items() if v > 0]
+    return [
+        (item_name, item_count)
+        for item_name, item_count in inventory.items()
+        if item_count > 0
+    ]
