@@ -1,1 +1,1 @@
-# Exercises taken on exercism.io
+# Exercises taken on exercism.org
