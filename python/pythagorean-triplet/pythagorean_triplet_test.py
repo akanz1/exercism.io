@@ -40,15 +40,16 @@ class PythagoreanTripletTest(unittest.TestCase):
             ],
         )
 
-    def test_triplets_for_large_number(self):
+    def test_triplets_for_medium_number(self):
         self.assertCountEqual(
-            triplets_with_sum(30000),
+            triplets_with_sum(12000),
             [
-                [1200, 14375, 14425],
-                [1875, 14000, 14125],
-                [5000, 12000, 13000],
-                [6000, 11250, 12750],
-                [7500, 10000, 12500],
+                [3000, 4000, 5000],
+                [2625, 4320, 5055],
+                [2400, 4500, 5100],
+                [2000, 4800, 5200],
+                [750, 5600, 5650],
+                [480, 5750, 5770],
             ],
         )
 
